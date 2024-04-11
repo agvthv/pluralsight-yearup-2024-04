@@ -20,7 +20,10 @@ public class MathApp
     {
         // Question 1:
         // declare variables here
-
+        double bobSalary = 134590;
+        double garySalary = 67908;
+        double highestSalary = Math.max(bobSalary, garySalary);
+        System.out.println("The highest salary is..." + highestSalary);
 
         // code the logic to the problem here
 
@@ -35,6 +38,10 @@ public class MathApp
     {
         // Question 2:
         // declare variables here
+        double carPrice = 34000.99;
+        double truckPrice = 45009.99;
+        double smallest = Math.min(carPrice, truckPrice);
+        System.out.println("Smallest price: " + smallest);
 
 
         // code the logic to the problem here
@@ -50,8 +57,9 @@ public class MathApp
     {
         // Question 3:
         // declare variables here
-
-
+        double radius = 7.25;
+        double area = Math.PI * Math.pow(radius, 2);
+        System.out.println("Area of the circle is: " + area);
         // code the logic to the problem here
 
 
@@ -65,6 +73,9 @@ public class MathApp
     {
         // Question 4:
         // declare variables here
+        double root = 5;
+        double squareRoot = Math.sqrt(root);
+        System.out.println("Square Root of 5: " + squareRoot);
 
 
         // code the logic to the problem here
@@ -80,8 +91,11 @@ public class MathApp
     {
         // Question 5:
         // declare variables here
-
-
+        double xFirst = Math.pow(80, 2);
+        double xSecond = Math.pow(40, 2);
+        double xThird = xFirst + xSecond;
+        double xResult = Math.sqrt(xThird);
+        System.out.println("Distance Between 2 Points: " + xResult);
         // code the logic to the problem here
 
 
@@ -111,7 +125,8 @@ public class MathApp
     {
         // Question 7:
         // declare variables here
-
+        double random = Math.random();
+        System.out.println(random);
 
         // code the logic to the problem here
 
