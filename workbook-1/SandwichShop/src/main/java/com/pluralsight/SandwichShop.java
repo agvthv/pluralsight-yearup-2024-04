@@ -13,25 +13,49 @@ public class SandwichShop
         // display cost of sandwich
 
         // create variables
-        double smallSize;
-        double largeSize;
-        int student;
+        final int REGULAR = 1;
+        final double SMALLPRICE = 5.45;
+        final int BIG = 2;
+        final double LARGEPRICE = 8.95;
 
-        System.out.println();
-        System.out.print("Please enter your name: ");
+        // sandwich size
+        System.out.print("Welcome. Would you like a 1) small or 2) large? ");
+        int size = userInput.nextInt();
 
-        System.out.printf("Welcome %s. What size sandwich would you like: \n", customerName);
-        System.out.printf("1) %s - $ %.2f \n", PRODUCT_CHOCOLATE, PRODUCT_CHOCOLATE_PRICE);
-        System.out.printf("2) %s - $ %.2f \n", PRODUCT_CANDY, PRODUCT_CANDY_PRICE);
-        System.out.println();
+        // age
+        System.out.print("How old are you? ");
+        int age = userInput.nextInt();
 
-        // ask user for sandwich size
-        System.out.print("What size sandwich would you like? ");
-        if (smallSize);
+        // discount
+        double discount;
+        if (age <=17)
         {
-
+            discount = 0.1;
+        }
+        else if (age >= 65)
+        {
+            discount = 0.2;
+        }
+        else
+        {
+            discount = 0.0;
+        }
+        // calculate price
+        double total;
+        if (size == REGULAR)
+        {
+            total = SMALLPRICE * (1 - discount);
+        } else if (size == BIG)
+        {
+            total = LARGEPRICE * (1 - discount);
+        } else
+        {
+            System.out.print("Please try again");
+            return;
         }
 
-        System.out.println("Hello world!");
+        // display
+        System.out.printf("Total: $ %.2f", total);
     }
 }
+
