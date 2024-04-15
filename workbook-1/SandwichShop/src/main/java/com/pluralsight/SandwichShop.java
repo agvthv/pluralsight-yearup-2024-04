@@ -45,13 +45,10 @@ public class SandwichShop
         if (size == REGULAR)
         {
             total = SMALLPRICE * (1 - discount);
-        } else if (size == BIG)
+        }
+        else
         {
             total = LARGEPRICE * (1 - discount);
-        } else
-        {
-            System.out.print("Please try again");
-            return;
         }
 
         // display
