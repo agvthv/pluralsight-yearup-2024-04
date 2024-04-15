@@ -27,6 +27,10 @@ public class FullNameApplication
         System.out.print("Enter your last name: ");
         String lastName = userInput.nextLine().strip().toUpperCase();
 
+        // suffix
+        System.out.print("Enter your suffix: ");
+        String suffix = userInput.nextLine().strip().toUpperCase();
+
         // print name
 
         System.out.print(firstName + " ");
@@ -41,6 +45,13 @@ public class FullNameApplication
         }
 
         System.out.print(lastName + " ");
-
+        if(!suffix.isBlank())
+        {
+            System.out.print(suffix + " ");
+        }
+        else
+        {
+            suffix = "";
+        }
     }
 }
