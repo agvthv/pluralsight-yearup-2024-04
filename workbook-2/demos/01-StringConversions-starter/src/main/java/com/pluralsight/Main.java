@@ -42,6 +42,9 @@ public class Main
         formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
         LocalDate birthDay = LocalDate.parse(userInput, formatter);
 
+        System.out.println(birthDay.getMonth());
+        System.out.println(birthDay.getMonthValue());
+
         userInput = "7 Oct 2002";
         formatter = DateTimeFormatter.ofPattern("d MMM yyyy");
         birthDay = LocalDate.parse(userInput, formatter);
