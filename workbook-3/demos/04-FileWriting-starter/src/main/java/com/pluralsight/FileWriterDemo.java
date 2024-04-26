@@ -8,7 +8,7 @@ import java.util.Arrays;
 
 public class FileWriterDemo
 {
-    public static void main(String[] args)
+    public static void main(String[] words)
     {
         String[] languages = {"Java", "C#", "JavaScript", "Python", "SQL"};
         writeToFile(languages);
@@ -27,6 +27,7 @@ public class FileWriterDemo
                 writer.write("\n"); // adds a new line
 
                 // writer.flush actually writes it to disk
+                writer.flush();
             }
 
             // writer.close() is called automatically here

@@ -23,6 +23,7 @@ public class Main
 
         System.out.println(today.getDayOfMonth());
         System.out.println(today.getMonth());
+        System.out.println(today.getDayOfWeek());
         System.out.println(today.getMonthValue());
         System.out.println(today.getYear());
         System.out.println(today.plusMonths(1));

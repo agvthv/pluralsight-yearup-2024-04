@@ -7,14 +7,16 @@ public class PrintWriterDemo
     public static void main(String[] args)
     {
         String[] languages = {"Java", "C#", "JavaScript", "Python", "SQL"};
+        String[] moreLanguages = {"HTML", "CSS", "Markdown", "JSON"};
         writeToFile(languages);
+        writeToFile(moreLanguages);
     }
 
     public static void writeToFile(String[] words)
     {
         File file = new File("files/programming-languages-print-writer.txt");
 
-        try(FileWriter fileWriter = new FileWriter(file);
+        try(FileWriter fileWriter = new FileWriter(file, true);
             PrintWriter writer = new PrintWriter(fileWriter);
         )
         {
@@ -22,6 +24,7 @@ public class PrintWriterDemo
             {
                 // works like System.out.printxxx()
                 writer.println(line);
+                writer.flush();
             }
         }
         catch(IOException ex)
