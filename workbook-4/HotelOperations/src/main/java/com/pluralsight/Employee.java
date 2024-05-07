@@ -9,13 +9,15 @@ public class Employee
     private double payRate;
 
 
-    public Employee(int employeeID, String employeeName, String department, int hoursWorked)
+    public Employee(int employeeID, String employeeName, String department, int hoursWorked,double payRate)
     {
         this.employeeID = employeeID;
         this.employeeName = employeeName;
         this.department = department;
         this.hoursWorked = hoursWorked;
+        this.payRate = payRate;
     }
+
     public int getHoursWorked()
     {
         return hoursWorked;
@@ -40,4 +42,25 @@ public class Employee
     {
         return payRate;
     }
+
+    public boolean isOvertime()
+    {
+        return hoursWorked > 40;
+    }
+
+    public double getTotalPay()
+    {
+        return getRegularHours() + getOvertimeHours();
+    }
+
+    public double getRegularHours()
+    {
+        return getPayRate() * getHoursWorked();
+    }
+
+    public double getOvertimeHours()
+    {
+        return isOvertime() ? hoursWorked * payRate:0;
+    }
 }
+
