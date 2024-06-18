@@ -3,6 +3,8 @@ package com.pluralsight.services;
 import com.pluralsight.models.Person;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Comparator;
 import java.util.List;
 
 public class PeopleBuilder
@@ -41,6 +43,7 @@ public class PeopleBuilder
         people.add(new Person("Leo", "Nascimento", 29));
         people.add(new Person("Maria", "Ferreira", 32));
 
+        //Collection.sort(people, new Person(Comparator));
         return people;
     }
 }
